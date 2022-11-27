@@ -1,6 +1,9 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
+  import { validate_component } from 'svelte/internal';
+import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
+    import DeeplyNested from './lib/nested/DeeplyNested.svelte';
+    import VeryDeeplyNested from './lib/other/nested/deepnested/VeryDeeplyNested.svelte';
 </script>
 
 <main>
@@ -13,6 +16,12 @@
     </a>
   </div>
   <h1>Vite + Svelte</h1>
+
+  Deeply Nested
+  <DeeplyNested/>
+
+  Very Deeply Nested
+  <VeryDeeplyNested/>
 
   <div class="card">
     <Counter />
